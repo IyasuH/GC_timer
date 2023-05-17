@@ -31,7 +31,8 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
-    margin-bottom: 40%;
+    margin-bottom: 5%;
+    margin-top:2%;
   }
 
 .day,
