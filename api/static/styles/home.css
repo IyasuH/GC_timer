@@ -12,10 +12,14 @@
     font-size: 5rem;
     font-weight: bold;
     padding: 3rem;
+    letter-spacing: 0.2em;
   }
   
   h3{
     text-align: center;
+  }
+  h4 {
+    text-align: center; 
   }
   .coming-soon {
     min-height: 100vh;
@@ -23,7 +27,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-image: url(https://t3.ftcdn.net/jpg/02/00/44/86/360_F_200448608_fWxFgpXbAQ3LbOdcxQljW3rd2rz4kGWG.jpg);
+    background-image: url(https://cdn.pixabay.com/photo/2019/06/07/12/27/texture-4258163_1280.jpg)
     /*background-size: 100%;*/
   }
   
