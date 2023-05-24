@@ -9,10 +9,10 @@
   }
   
   h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: bold;
-    padding: 3rem;
-    letter-spacing: 0.2em;
+    padding: 5;
+    /* letter-spacing: 0.2em; */
   }
   
   h3{
@@ -26,9 +26,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    background-image: url(https://cdn.pixabay.com/photo/2019/06/07/12/27/texture-4258163_1280.jpg)
-    /*background-size: 100%;*/
+    /* justify-content: 40%; */
+    padding-top: 20%;
+    background-image: url(https://cdn.pixabay.com/photo/2019/06/07/12/27/texture-4258163_1280.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
   }
   
   .countdown {
@@ -37,6 +40,8 @@
     text-align: center;
     margin-bottom: 5%;
     margin-top:2%;
+    padding-right: 2%;
+    padding-left: 2%;
   }
 
 .day,
