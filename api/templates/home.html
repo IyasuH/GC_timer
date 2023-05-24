@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GC COUNTDOWN</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../static/styles/home.css"/>
 </head>
 <body>
+    <div class="topnav" id="cotmTopnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#achive">Achivements</a>
+      <a href="#event">Events</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    <div class="bg-image" id="home"></div>
     <div class="coming-soon">
-        <div>
-          <h2>TIME  REMAINING</h2>
+          <h2 class="header">TIME  REMAINING</h2>
           <h3>For Graduation</h3>
           <div class="countdown">
             <div class="container-day">
@@ -32,8 +41,58 @@
             </div>
           </div>
           <h4>Jul 08, 2023</h4>
-        </div>
     </div>
+    <!-- </section> -->
+    <!-- <section id="Achivements"> -->
+    <div class="bg-image-2" id="achive"></div>
+    <div class="achivements">
+      <h1>Achivements</h1>
+    <div class="progress-containers">
+      <div class="progress-card progress_1">
+        <h2 class="card-title">
+          <i class="card-ele material-icons">event</i>
+          <p class="card-ele" >5</p>
+        </h2>
+        <p class="card-desc" >Successful Years.</p>
+      </div>
+      <div class="progress-card progress_2">
+        <h2 class="card-title">
+          <i class="card-ele material-icons">subject</i>
+          <p class="card-ele" >10</p>
+        </h2>
+        <p class="card-desc" >Semesters.</p>
+      </div>
+      <div class="progress-card progress_3">
+        <h2 class="card-title">
+          <i class="card-ele material-icons">edit</i>
+          <p class="card-ele" >50</p>
+        </h2>
+        <p class="card-desc" >Courses.</p>
+      </div>
+      <div class="progress-card progress_4">
+        <h2 class="card-title">
+          <i class="card-ele material-icons">library_books</i>
+          <p class="card-ele" >100</p>
+        </h2>
+        <p class="card-desc" >Classes.</p>
+      </div>
+      <div class="progress-card progress_5">
+        <h2 class="card-title">
+          <i class="card-ele material-icons">assignment</i>
+          <p class="card-ele" >140</p>
+        </h2>
+        <p class="card-desc">Projects And Assignments.</p>
+      </div>
+      <div class="progress-card progress_6">
+        <h2 class="card-title">
+          <i class="card-ele material-icons">access_time</i>
+          <p class="card-ele" >130</p>
+        </h2>
+        <p class="card-desc">Lecture Hours.</p>
+      </div>        
+  </div>
+  </div>
+  <!-- </section> -->
       <script src="../static/scripts/index.js"></script>
 </body>
 </html>

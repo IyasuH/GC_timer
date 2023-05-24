@@ -22,3 +22,12 @@ const countdown = () => {
 
 // should use 500 as setInterval won't always run on time.
 setInterval(countdown, 500);
+
+function myFunction(){
+    var x=document.getElementById("cotmTopnav");
+    if (x.className === "topnav"){
+      x.className+=" responsive";
+    } else{
+      x.className = "topnav";
+    }
+  }
