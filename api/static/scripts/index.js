@@ -23,11 +23,34 @@ const countdown = () => {
 // should use 500 as setInterval won't always run on time.
 setInterval(countdown, 500);
 
-function myFunction(){
-    var x=document.getElementById("cotmTopnav");
-    if (x.className === "topnav"){
-      x.className+=" responsive";
-    } else{
-      x.className = "topnav";
+var navbar = document.getElementById("cotmTopnav")
+
+window.onscroll = function(){scrollFunction()};
+
+var sticky = navbar.offsetTop;
+let mybutton = document.getElementById("toTopBtn");
+
+function scrollFunction(){
+    if (window.pageYOffset >= sticky){
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
     }
-  }
+
+    if (document.body.scrollTop >20 || document.documentElement.scrollTop >20){
+        mybutton.style.display = "block";
+    }else{
+        mybutton.style.display="none";
+    }
+}
+
+function toTopBtn(){
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
+    if (document.body.scrollTop >20 || document.documentElement.scrollTop >20){
+        mybutton.style.display = "block";
+    }else{
+        mybutton.style.display="none";
+    }
+
+}
