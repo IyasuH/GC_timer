@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CoTM-11</title>
+    <link rel="icon" href="/static/img/cotm-11.jpg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="../static/styles/home.css?v=3"/>
+    <script src="https://kit.fontawesome.com/74048ef553.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/styles/home.css?v=4"/>
 </head>
-<body>
+<body onload="FillAlbum()">
     <div class="topnav" id="cotmTopnav">
       <a href="#cotm11">Home</a>
       <a href="#progress">Progress</a>
@@ -51,88 +53,139 @@
     <br>
     <div class="bg-image-2" id="progress"></div>
     <div class="progress">
-      <h1 class="title">Progress</h1>
+      <h2 class="title">Progress</h2>
       <div class="progress-containers">
         <div class="progress-card progress_1">
           <h2 class="card-title">
             <i class="card-ele material-icons">event</i>
-            <p class="card-ele" >4.9/5</p>
+            <div class="card-ele" >4.9/5</div>
           </h2>
-          <p class="card-desc" >Years.</p>
+          <div class="card-desc" >Years.</div>
         </div>
         <div class="progress-card progress_2">
           <h2 class="card-title">
             <i class="card-ele material-icons">subject</i>
-            <p class="card-ele" >9/10</p>
+            <div class="card-ele" >9/10</div>
           </h2>
-          <p class="card-desc" >Semesters.</p>
+          <div class="card-desc" >Semesters.</div>
         </div>
         <div class="progress-card progress_3">
           <h2 class="card-title">
             <i class="card-ele material-icons">edit</i>
-            <p class="card-ele" >45/50</p>
+            <div class="card-ele" >45/50</div>
           </h2>
-          <p class="card-desc" >Courses.</p>
+          <div class="card-desc" >Courses.</div>
         </div>
         <div class="progress-card progress_4">
           <h2 class="card-title">
             <i class="card-ele material-icons">library_books</i>
-            <p class="card-ele" >175/190</p>
+            <div class="card-ele" >175/190</div>
           </h2>
-          <p class="card-desc" >Classes.</p>
+          <div class="card-desc" >Classes.</div>
         </div>
         <div class="progress-card progress_5">
           <h2 class="card-title">
             <i class="card-ele material-icons">assignment</i>
-            <p class="card-ele" >143/150</p>
-            
+            <div class="card-ele" >143/150</div>
           </h2>
-          <p class="card-desc">Projects.</p>
+          <div class="card-desc">Projects.</div>
         </div>
         <div class="progress-card progress_6">
           <h2 class="card-title">
             <i class="card-ele material-icons">access_time</i>
-            <p class="card-ele" >678/700</p>
+            <div class="card-ele" >678/700</div>
           </h2>
-          <p class="card-desc">Credit Hours.</p>
+          <div class="card-desc">Credit Hours.</div>
         </div>        
     </div>
   </div>
   <br>
   <div class="bg-image-3" id="quotes"></div>
   <div class="quotes">
-    <h1 class="title">Quotes</h1>
+    <h2 class="title">Last Words</h2>
+    {% block content %}
     <div class="quotesp">
-      <div class="quote">
-        <p class="quotes-body">" excitement is guaranteed but success is not excitement is guaranteed but success is not "</p>
-        <p class="quote-by">Elon M</p>
+      {% for data in datas %}
+      <div class="quotteGp">
+        {% for dat in data %}
+        <div class="quote">
+          <p class="quotes-body">{{ dat.last_word }}</p>
+          <p class="quote-by"><a href={{"https://t.me/"~data.user_name}}>{{ dat.first_name }}</a></p>
+        </div>
+        {% endfor %}
       </div>
+      {% endfor %}
+    </div>
+    {% endblock %}
+    <a href="https://t.me/cotm11bot" id="addQuoteBtn">
+      <input type="button" value="Add Yours">
+      <!-- <button onclick="">Add Yours</button> -->
+    </a>
+  </div>
 
-      <div class="quote">
-        <p class="quotes-body">" excitement is guaranteed but success is not "</p>
-        <p class="quote-by">Elon M</p>
+  <div class="album" id="album">
+    <h2 class="title">Album</h2>
+    <svg class="bg-repeat">
+      <defs>
+        <pattern id="repeat-val" x="12.5%" y="10%" width="25%" height=".11">
+          <text x="1" y="20" class="repeat-text">
+            # CoTM-11
+          </text>
+        </pattern>
+      </defs>
+      <rect fill="url(#repeat-val)" stroke="black" width="100%" height="100%"></rect>
+    </svg>
+    <div class="album-all">
+      <div class="slider">
+        <img id="img-1" src="/static/img/cotm-1.jpg" alt="">
+        <img id="img-2" src="/static/img/cotm-11.jpg" alt="">
+        <img id="img-3" src="/static/img/gebi-1.jpg" alt="">
       </div>
-
-      <div class="quote">
-        <p class="quotes-body">" excitement is guaranteed but success is not "</p>
-        <p class="quote-by">Elon M</p>
+      <div class="navigation-button">
+        <span class="dot active" onclick="changeSlide(0)"></span>
+        <span class="dot" onclick="changeSlide(1)"></span>
+        <span class="dot" onclick="changeSlide(2)"></span>
       </div>
     </div>
-    <button id="addQuoteBtn" onclick="">Add Yours</button>
   </div>
 
-  <div class="bg-image-4"></div>
+  <!-- <div class="bg-image-4"></div> -->
   <div class="about" id="about">
     <h2 class="title">About</h2>
-    <!-- <br> -->
     <h1 class="title cotm">CoTM 11</h1>
-    <p>
-      
+    <p class="about-desc">
+      This year, the Construction Technology Management Graduate students from Addis Ababa University's esteemed EiABC campus have poured their hearts and souls into their studies. They have labored tirelessly to gain the skills and knowledge needed to become the next generation of builders, engineers, and leaders in their field.
     </p>
+    <p class="about-desc">
+      These bright individuals are eager to put their newfound expertise to work for the betterment of their country and communities. By supporting them, you play an essential role in helping them achieve their dreams. Become their sponsor and watch as these talented students build a better future for all who call Ethiopia home.
+    </p>
+    <br>
+    <button id="sponserBtn" onclick="">Sponser</button>
+    <!-- <br> -->
+    <div class="sponsers">
+      <h2>Sponsers</h2>
+      <!-- <h2>Partners</h2> -->
+      <br>
+      <div class="partners">
+        <img id="sponser-1" src="/static/img/sponsers/coffee-go.png" alt="">
+      </div>
+    </div>
   </div>
   <button onclick="toTopBtn()" id="toTopBtn" title="Go to top">
-    <i class="card-ele material-icons">keyboard_arrow_up</i>
+    <i class="toTopBtn material-icons">keyboard_arrow_up</i>
   </button>
-      <script src="../static/scripts/index.js?v=3"></script>
+  <footer id="footer">
+    <div class="footer-desc">
+      <p>Designed and developed by <a href="https://t.me/IyasuHa">IyasuHa</a></p>
+    </div>
+    <div class="social-media">
+      <a target="_blank" href="https://github.com/IyasuH"><i class="fab fa-github"></i></a>
+      <a tabindex="_blank" href="https://instagram.com/eyasuhailegebriel?igshid=NTc4MTIwNjQ2YQ=="><i class="fab fa-instagram"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/eyasu-hailegebriel-a423601a3"><i class="fab fa-linkedin"></i></a>
+      <!-- <a target="_blank" href=""><i class="fab fa-twitter"></i></a> -->
+      <a target="_blank" href="https://t.me/IyasuHa"><i class="fab fa-telegram"></i></a>
+    </div>
+  </footer>
+      <script src="../static/scripts/index.js?v=4"></script>
 </body>
 </html>

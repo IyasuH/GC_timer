@@ -1,1 +1,6 @@
 env
+.env
+.space
+*.pyc
+*.swp
+.space
