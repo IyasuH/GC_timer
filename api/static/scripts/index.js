@@ -23,6 +23,28 @@ const countdown = () => {
 // should use 500 as setInterval won't always run on time.
 setInterval(countdown, 500);
 
+// for new nav bar
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu(){
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu(){
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+
+// end of new nav bar
+
 var navbar = document.getElementById("cotmTopnav")
 
 window.onscroll = function(){scrollFunction()};
@@ -52,7 +74,6 @@ function toTopBtn(){
     }else{
         mybutton.style.display="none";
     }
-
 }
 
 // 
