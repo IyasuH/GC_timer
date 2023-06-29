@@ -20,7 +20,7 @@ def home():
     for x in range(0, len(all_last_words), 3):
         t=x+3
         sorted.append(all_last_words[x:t])
-    print(sorted)
+    #print(sorted)
     return render_template('home.html', datas=sorted)
 
 if __name__ == "__main__":
