@@ -9,17 +9,10 @@
     <link rel="icon" href="/static/img/cotm-11.jpg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://kit.fontawesome.com/74048ef553.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/74048ef553.js?v=2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../static/styles/home.css?v=6"/>
 </head>
 <body>
-    <!-- <div class="topnav" id="cotmTopnav">
-      <a href="#cotm11">Home</a>
-      <a href="#progress">Progress</a>
-      <a href="#quotes">Quotes</a>
-      <a href="#album">Album</a>
-      <a href="#about">About</a>
-    </div> -->
     <header class="header" id="cotmTopnav">
       <nav class="navbar">
         <a href="" class="nav-logo">CoTM-11</a>
@@ -69,7 +62,7 @@
               <h3 class="time-desc">Second/s</h3>
             </div>
           </div>
-          <p class="graday">Jul 08, 2023</p>
+          <p class="graday">Jul 20, 2023</p>
           <br>
           <h4 class="upcoming-event head">upcoming event</h4>
           <p class="upcoming-event">
@@ -90,35 +83,35 @@
         <div class="progress-card progress_2">
           <h2 class="card-title">
             <i class="card-ele material-icons">subject</i>
-            <div class="card-ele" >9/10</div>
+            <div class="card-ele" >10</div>
           </h2>
           <div class="card-desc" >Semesters.</div>
         </div>
         <div class="progress-card progress_3">
           <h2 class="card-title">
             <i class="card-ele material-icons">edit</i>
-            <div class="card-ele" >73/78</div>
+            <div class="card-ele" >78</div>
           </h2>
           <div class="card-desc" >Courses.</div>
         </div>
         <div class="progress-card progress_4">
           <h2 class="card-title">
             <i class="card-ele material-icons">library_books</i>
-            <div class="card-ele" >175/190</div>
+            <div class="card-ele" >190</div>
           </h2>
           <div class="card-desc" >Classes.</div>
         </div>
         <div class="progress-card progress_5">
           <h2 class="card-title">
             <i class="card-ele material-icons">assignment</i>
-            <div class="card-ele" >147/156</diiv>
+            <div class="card-ele" >156</diiv>
           </h2>
           <div class="card-desc">Projects.</div>
         </div>
         <div class="progress-card progress_6">
           <h2 class="card-title">
             <i class="card-ele material-icons">access_time</i>
-            <div class="card-ele" >257/258</div>
+            <div class="card-ele" >258</div>
           </h2>
           <div class="card-desc">Credit Hours.</div>
         </div>        
@@ -134,7 +127,7 @@
         {% for dat in data %}
         <div class="quote">
           <p class="quotes-body">{{ dat.last_word }}</p>
-          <p class="quote-by"><a href={{"https://t.me/"~data.user_name}}>{{ dat.first_name }}</a></p>
+          <p class="quote-by"><a href={{"https://t.me/"+dat.user_name}}>{{ dat.first_name }}</a></p>
         </div>
         {% endfor %}
       </div>
